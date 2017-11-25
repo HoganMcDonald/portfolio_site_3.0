@@ -1,0 +1,19 @@
+{
+  "name": "portfolio_site_3.0",
+  "version": "1.0.0",
+  "description": "third iteration of my personal website",
+  "main": "server.js",
+  "scripts": {
+    "postinstall": "mkdir public/vendors && cp node_modules/angular/angular.min.js public/vendors && cp node_modules/jquery/dist/jquery.min.js public/vendors && cp node_modules/p5/lib/p5.min.js public/vendors",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hogan McDonald",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.7",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "jquery": "^3.2.1",
+    "p5": "^0.5.16"
+  }
+}
