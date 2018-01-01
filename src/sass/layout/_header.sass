@@ -1,3 +1,8 @@
+$sectionWidth: 100px
+$socialWidth: $sectionWidth * 0.8
+
+$socialLinkMargin: 10px
+
 header
   // background-color: black
   position: fixed
@@ -5,7 +10,45 @@ header
   top: 0
   .logo
     position: fixed
-    left: 50%
-    top: 50%
-    transform: translate(-50%, -50%)
-    width: 300px
+    left: 5vh
+    top: 5vh
+    width: $sectionWidth
+  .contact
+    transform: rotate(270deg)
+    position: fixed
+    width: $sectionWidth
+    height: $sectionWidth
+    left: 5vh
+    bottom: 5vh
+    p
+      margin: 0px
+      width: 15vh
+  .social-menu
+    background-color: black
+    height: $sectionWidth
+    width: $sectionWidth
+    position: fixed
+    right: 5vh
+    bottom: 5vh
+    border-radius: 50%
+    display: flex
+    align-items: center
+    ul
+      list-style: none
+      width: $sectionWidth * 4
+      padding: 0
+      margin: 0
+      position: absolute
+      right: $sectionWidth + $socialLinkMargin
+      display: flex
+      .social-link
+        width: $socialWidth
+        height: $socialWidth
+        border-radius: 50%
+        background-color: $pastelPurple
+        display: inline-block
+        margin: $socialLinkMargin
+        &:nth-child(2)
+          background-color: $trolleyGrey
+        &:nth-child(3)
+          background-color: $myrtleGreen

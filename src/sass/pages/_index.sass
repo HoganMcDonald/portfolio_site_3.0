@@ -1,0 +1,25 @@
+$imgHeight: 4265px
+$imgWidth: 2399px
+
+#index
+  margin: 0
+  overflow: hidden
+  main
+    .image
+      position: absolute
+      right: 0
+      z-index: -1
+      height: $imgHeight/2
+      width: $imgWidth/2
+      background:
+        image: url('/assets/images/colorful.jpg')
+        // 2399 x 4265
+        size: cover
+        position: center
+      opacity: 0.8
+    .site-title
+      margin: 0
+      position: relative
+      left: 30vh
+      top: 50vh
+      transform: translateY(-50%)
