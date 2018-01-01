@@ -1,24 +1,22 @@
 require('dotenv').config();
 
-//globals
-const port = process.env.PORT;
-
-//app
 const express = require('express');
+const path = require('path');
+const compression = require('compression');
 const app = express();
 
-//packages
-const path = require('path');
-
-//uses
+// middleware
 app.use(express.static('public'));
+app.use(compression());
 
-//routes
+// routes
 app.get('/', (req, res)=> {
-  res.sendFile(path.resolve('public/views/index.html'));
+  res.sendFile(path.resolve('public/views/index.min.html'));
 });
 
-//spin up server
-app.listen(port, ()=> {
-  console.log('up on port ', port);
-});
+// start server
+const server = app.listen(process.env.PORT, () =>
+  console.log(`   Server listening on port ${server.address().port}\n   currently running in ${process.env.NODE_ENV} mode`));
+
+// export
+module.exports = app;
