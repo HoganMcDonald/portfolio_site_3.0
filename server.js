@@ -11,7 +11,7 @@ app.use(compression());
 
 // routes
 app.get('/', (req, res)=> {
-  res.sendFile(path.resolve('docs/views/index.min.html'));
+  res.sendFile(path.resolve('docs/views/index.html'));
 });
 
 // start server

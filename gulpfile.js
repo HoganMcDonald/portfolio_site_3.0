@@ -66,9 +66,9 @@ gulp.task('fonts', ['clean:fonts'], ()=> {
 gulp.task('html', ()=> {
   gulp.src(`${srcDir}/views/**/*.html`)
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(rename({
-      suffix: '.min'
-    }))
+    // .pipe(rename({
+    //   suffix: '.min'
+    // }))
     .pipe(gulp.dest(`${destDir}/views`))
     .pipe(browserSync.reload({
       stream: true
