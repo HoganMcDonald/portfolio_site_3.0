@@ -6,12 +6,12 @@ const compression = require('compression');
 const app = express();
 
 // middleware
-app.use(express.static('public'));
+app.use(express.static('docs'));
 app.use(compression());
 
 // routes
 app.get('/', (req, res)=> {
-  res.sendFile(path.resolve('public/views/index.min.html'));
+  res.sendFile(path.resolve('docs/views/index.min.html'));
 });
 
 // start server

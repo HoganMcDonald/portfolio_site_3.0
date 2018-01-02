@@ -5,7 +5,7 @@ const nodePort = 3000;
 const bsPort = 5000; // must be different from nodePort
 
 const srcDir = 'src'; // path from ./ where you write code (src)
-const destDir = 'public'; // final location from ./ where distribution files will go
+const destDir = 'docs'; // final location from ./ where distribution files will go
 
 const scriptOrder = ['src/scripts/**/*.js'];
 const styleOrder = ['src/sass/main.sass'];

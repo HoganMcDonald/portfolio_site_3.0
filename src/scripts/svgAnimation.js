@@ -13,6 +13,9 @@ const iterations = ['Web Developer',
   'Hogan McDonald.'
 ];
 
+const landing = $('#landing').scrollTop();
+const tech = $('#tech').scrollTop();
+
 
 
 
@@ -40,7 +43,7 @@ function changeText(i) {
   setTimeout(function() {
     console.log(iterations[i]);
     $('.site-title-text').text(iterations[i]);
-  }, i * interval);
+  }, i * interval + 600);
 }
 
 
@@ -66,6 +69,4 @@ setTimeout(function() {
       changeText(i);
     }
   });
-
-
 }, 2000)
