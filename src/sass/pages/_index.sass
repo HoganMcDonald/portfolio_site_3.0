@@ -1,15 +1,15 @@
 $imgHeight: 4265px
 $imgWidth: 2399px
 
-$imgDivHeight: 106vw
+$imgDivHeight: 100vh
 $imgDivWidth: 60vw
 
 $headerSize: 5.063em
 
 #index
   margin: 0
-  overflow: hidden
   main
+    min-height: 100vh
     .image
       position: absolute
       right: 0
@@ -27,7 +27,6 @@ $headerSize: 5.063em
       left: 30vh
       top: calc(50vh)
       transform: translateY(-50%)
-      // width: 40vw
       height: $headerSize * 2.17
     .site-title-text
       margin: 0

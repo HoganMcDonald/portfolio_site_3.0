@@ -28,7 +28,7 @@ function toggleSocial() {
           Event Listeners
 ***********************************/
 
-$('.social-menu').on('click', toggleSocial);
+$('.social-menu').eq(1).on('click', toggleSocial);
 
 setTimeout(function() {
   $('.cls-1, .cls-2').animate({

@@ -1,0 +1,41 @@
+footer
+  width: 100%
+  height: 45vh
+  // background: linear-gradient(45deg, $pastelPurple, $paynesGrey )
+  background-color: $paynesGrey
+  display: flex
+  align-items: center
+  justify-content: center
+  .content
+    display: grid
+    grid-template-columns: 30vw 30vw
+    grid-column-gap: 2vw
+    .text
+      text-align: right
+      .taglines
+        margin-top: 180px
+    .contact-form
+      .email
+        label
+          display: block
+        input
+          font-family: $robotoMono
+          background: none
+          border: none
+          border-bottom: solid 3px $pinkLavender
+          font-size: .667em
+          transition: font 200ms
+          width: 350px
+          color: white
+          &:focus
+            font-size: 1em
+        textarea
+          font-family: $robotoMono
+          font-size: .667em
+          color: white
+          resize: none
+          width: 330px
+          height: 150px
+          background-color: $trolleyGrey
+          border: none
+          padding: 10px
