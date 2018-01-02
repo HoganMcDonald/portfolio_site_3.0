@@ -69,7 +69,7 @@ gulp.task('html', ()=> {
     // .pipe(rename({
     //   suffix: '.min'
     // }))
-    .pipe(gulp.dest(`${destDir}`))
+    .pipe(gulp.dest(`${destDir}/views`))
     .pipe(browserSync.reload({
       stream: true
     }));
