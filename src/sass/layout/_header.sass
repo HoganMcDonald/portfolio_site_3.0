@@ -4,10 +4,28 @@ $socialWidth: $sectionWidth * 0.8
 $socialLinkMargin: 10px
 
 header
-  // background-color: black
   position: fixed
   left: 0
   top: 0
+  nav
+    position: fixed
+    top: 5vh
+    right: 5vh
+    ul
+      list-style: none
+      padding: 0
+      margin: 0
+      hr
+        display: inline
+        border: solid black 1px
+      li
+        display: inline
+        margin: 50px
+        font-family: $robotoMono
+        user-select: none
+        cursor: pointer
+        text-transform: uppercase
+        text-shadow: 2px 2px 0px $pinkLavender
   .logo
     position: fixed
     left: 5vh
@@ -56,16 +74,17 @@ header
         background-color: $pastelPurple
         margin: $socialLinkMargin
         transition: transform 400ms
-        &:nth-child(2)
-          background-color: $trolleyGrey
-        &:nth-child(3)
-          background-color: $myrtleGreen
         img
           width: 50%
           position: relative
           right: 50%
           top: 50%
           transform: translate(50%, -50%)
+      .linkedin
+        background-color: $trolleyGrey
+      .instagram
+        background-color: $myrtleGreen
+
 
 .hidden
   transform: translateY(20vh)

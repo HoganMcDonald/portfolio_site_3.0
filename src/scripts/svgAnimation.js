@@ -16,7 +16,7 @@ function toggleSocial() {
     let timer = ($(this).hasClass('hidden')) ? index : 2 - index
     setTimeout(function() {
       $('.social-link').eq(index).toggleClass('hidden');
-    }, timer * 150);
+    }, timer * 100);
   })
 }
 
