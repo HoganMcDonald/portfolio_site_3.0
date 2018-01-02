@@ -1,6 +1,11 @@
 $imgHeight: 4265px
 $imgWidth: 2399px
 
+$imgDivHeight: 106vw
+$imgDivWidth: 60vw
+
+$headerSize: 5.063em
+
 #index
   margin: 0
   overflow: hidden
@@ -9,17 +14,26 @@ $imgWidth: 2399px
       position: absolute
       right: 0
       z-index: -1
-      height: $imgHeight/2
-      width: $imgWidth/2
+      height: $imgDivHeight
+      width: $imgDivWidth
       background:
         image: url('/assets/images/colorful.jpg')
-        // 2399 x 4265
         size: cover
         position: center
       opacity: 0.8
     .site-title
       margin: 0
-      position: relative
+      position: absolute
+      left: 30vh
+      top: calc(50vh)
+      transform: translateY(-50%)
+      // width: 40vw
+      height: $headerSize * 2.17
+    .site-title-text
+      margin: 0
+      position: absolute
       left: 30vh
       top: 50vh
-      transform: translateY(-50%)
+      transform: translateY(-52.5%)
+      width: 40vw
+      opacity: 0
