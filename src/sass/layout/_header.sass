@@ -31,8 +31,16 @@ header
     right: 5vh
     bottom: 5vh
     border-radius: 50%
+    transition: background 300ms
     display: flex
     align-items: center
+    justify-content: center
+    cursor: pointer
+    &:hover
+      background-color: $pinkLavender
+    p
+      margin: 0
+      user-select: none
     ul
       list-style: none
       width: $sectionWidth * 4
@@ -46,9 +54,18 @@ header
         height: $socialWidth
         border-radius: 50%
         background-color: $pastelPurple
-        display: inline-block
         margin: $socialLinkMargin
+        transition: transform 400ms
         &:nth-child(2)
           background-color: $trolleyGrey
         &:nth-child(3)
           background-color: $myrtleGreen
+        img
+          width: 50%
+          position: relative
+          right: 50%
+          top: 50%
+          transform: translate(50%, -50%)
+
+.hidden
+  transform: translateY(20vh)
