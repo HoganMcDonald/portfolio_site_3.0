@@ -60,3 +60,35 @@
           background-color: $myrtleGreen
     .current-project
       // border: solid 2px black
+      width: 700px
+      height: 450px
+      position: relative
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      h3
+        width: 300px
+        position: absolute
+        top: 30px
+        left: 100px
+        margin: 0
+      p
+        width: 450px
+        position: absolute
+        left: 30px
+        bottom: 20px
+      img
+        width: 300px
+        position: absolute
+        top: 0
+        right: 0
+        z-index: -1
+      .background
+        z-index: -3
+        width: 80%
+        height: 80%
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%) rotate(-10deg)
+        background-color: $paynesGrey
