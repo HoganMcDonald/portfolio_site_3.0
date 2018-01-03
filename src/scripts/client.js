@@ -14,7 +14,10 @@ const iterations = ['Web Developer',
 ];
 
 const landing = $('#landing').scrollTop();
-const tech = $('#tech').scrollTop();
+const tech = $('#tech').offset().top;
+const solutions = $('#solutions').offset().top;
+
+
 
 
 
@@ -41,12 +44,28 @@ function changeText(i) {
   let interval = (i === iterations.length - 1) ? 300 : randomInt(100, 299); // this ensures that the final iteration will always be what the animation resolves on
 
   setTimeout(function() {
-    console.log(iterations[i]);
     $('.site-title-text').text(iterations[i]);
   }, i * interval + 600);
 }
 
+function sectionScroll() {
+  const section = $(`#${$(this).text().toLowerCase()}`);
+  if (section.length) {
+    $('html,body').animate({scrollTop: section.offset().top},'slow');
+  }
+}
 
+function changeMenuColor(currentScroll) {
+  if (currentScroll <= tech) {
+    $('.nav-link').css('text-shadow', '2px 2px 0px #d4afcd');
+  }
+  if (currentScroll > tech && currentScroll <= solutions) {
+    $('.nav-link').css('text-shadow', '2px 2px 0px #b79fad');
+  }
+  if (currentScroll > solutions) {
+    $('.nav-link').css('text-shadow', '2px 2px 0px #798086');
+  }
+}
 
 
 
@@ -55,6 +74,13 @@ function changeText(i) {
 ***********************************/
 
 $('.social-menu').eq(1).on('click', toggleSocial);
+
+$('.nav-link').on('click', sectionScroll);
+
+$(window).on('scroll', function() {
+  const bScroll = document.scrollingElement.scrollTop;
+  changeMenuColor(bScroll);
+});
 
 setTimeout(function() {
   $('.cls-1, .cls-2').animate({
