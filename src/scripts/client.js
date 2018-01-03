@@ -16,6 +16,7 @@ const iterations = ['Web Developer',
 const landing = $('#landing').scrollTop();
 const tech = $('#tech').offset().top;
 const solutions = $('#solutions').offset().top;
+// const me = $('#me').offset().top;
 
 
 
@@ -62,8 +63,11 @@ function changeMenuColor(currentScroll) {
   if (currentScroll >= tech && currentScroll < solutions) {
     $('.nav-link').css('text-shadow', '2px 2px 0px #b79fad');
   }
-  if (currentScroll >= solutions) {
+  if (currentScroll >= solutions && currentScroll < me) {
     $('.nav-link').css('text-shadow', '2px 2px 0px #798086');
+  }
+  if (currentScroll >= me) {
+    $('.nav-link').css('text-shadow', '2px 2px 0px #556f7a');
   }
 }
 

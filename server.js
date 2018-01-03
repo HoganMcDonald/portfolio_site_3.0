@@ -14,6 +14,10 @@ app.get('/', (req, res)=> {
   res.sendFile(path.resolve('docs/views/index.html'));
 });
 
+app.get('/resume', (req, res)=> {
+  res.sendFile(path.resolve('docs/assets/resume.pdf'));
+});
+
 // start server
 const server = app.listen(process.env.PORT, () =>
   console.log(`   Server listening on port ${server.address().port}\n   currently running in ${process.env.NODE_ENV} mode`));

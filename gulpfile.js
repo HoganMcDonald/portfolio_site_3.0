@@ -76,7 +76,7 @@ gulp.task('html', ()=> {
 });
 
 gulp.task('images', ['clean:assets'], ()=> {
-  gulp.src(`${srcDir}/assets/**/*+(png|jpg|jpeg|gif|svg)`)
+  gulp.src(`${srcDir}/assets/**/*+(png|jpg|jpeg|gif|svg|pdf)`)
     .pipe(imagemin())
     .pipe(gulp.dest(`${destDir}/assets`))
     .pipe(browserSync.reload({
