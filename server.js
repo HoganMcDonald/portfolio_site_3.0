@@ -6,8 +6,8 @@ const compression = require('compression');
 const app = express();
 
 // middleware
-app.use(express.static('docs'));
 app.use(compression());
+app.use(express.static('docs'));
 
 // routes
 app.get('/', (req, res)=> {

@@ -56,13 +56,13 @@ function sectionScroll() {
 }
 
 function changeMenuColor(currentScroll) {
-  if (currentScroll <= tech) {
+  if (currentScroll < tech) {
     $('.nav-link').css('text-shadow', '2px 2px 0px #d4afcd');
   }
-  if (currentScroll > tech && currentScroll <= solutions) {
+  if (currentScroll >= tech && currentScroll < solutions) {
     $('.nav-link').css('text-shadow', '2px 2px 0px #b79fad');
   }
-  if (currentScroll > solutions) {
+  if (currentScroll >= solutions) {
     $('.nav-link').css('text-shadow', '2px 2px 0px #798086');
   }
 }
