@@ -34,9 +34,9 @@ function randomInt(min, max) {
 
 function toggleSocial() {
   $('.social-link').each(function(index) {
-    let timer = ($(this).hasClass('hidden')) ? index : 2 - index
+    let timer = (!$(this).hasClass('show')) ? index : 2 - index
     setTimeout(function() {
-      $('.social-link').eq(index).toggleClass('hidden');
+      $('.social-link').eq(index).toggleClass('show');
     }, timer * 100);
   })
 }

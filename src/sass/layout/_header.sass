@@ -66,12 +66,12 @@ header
       cursor: pointer
     ul
       list-style: none
-      width: $sectionWidth * 4
       padding: 0
       margin: 0
       position: absolute
       right: $sectionWidth + $socialLinkMargin
       display: flex
+      transform: translateY(200px)
       .social-link
         width: $socialWidth
         height: $socialWidth
@@ -91,5 +91,5 @@ header
         background-color: $myrtleGreen
 
 
-.hidden
-  transform: translateY(200px)
+.show
+  transform: translateY(-200px)
