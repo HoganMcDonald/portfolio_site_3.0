@@ -16,7 +16,7 @@ const iterations = ['Web Developer',
 const landing = $('#landing').scrollTop();
 const tech = $('#tech').offset().top;
 const solutions = $('#solutions').offset().top;
-// const me = $('#me').offset().top;
+const me = $('#me').offset().top;
 
 
 
