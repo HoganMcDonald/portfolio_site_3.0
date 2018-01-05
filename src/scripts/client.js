@@ -2,6 +2,29 @@
           UI elements
 ***********************************/
 
+const projects = [
+  {
+    name: 'Odin & Osgar.',
+    description: 'Odin and Osgar is a retail venture that I am a co-owner of. Our goal was to design and print a line of tshirts that celebrate reading and bookishness (the good kind). We have an established retail presence, but are now expanding to online.',
+    imgsrc: '/assets/images/minnesotabound.png'
+  },
+  {
+    name: 'TCSW.',
+    description: 'text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text .',
+    imgsrc: '/assets/images/tcsw.jpg'
+  },
+  {
+    name: 'Praeco.',
+    description: 'text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text .',
+    imgsrc: '/assets/images/praeco.png'
+  },
+  {
+    name: 'Capture.',
+    description: 'text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text .',
+    imgsrc: '/assets/images/capture.png'
+  }
+];
+
 const iterations = ['Web Developer',
   'Wabe Devlooper.',
   'wAba mEvLoaper.',
@@ -71,6 +94,22 @@ function changeMenuColor(currentScroll) {
   }
 }
 
+function changeCurrentProject() {
+  const positions = ['first', 'second', 'third', 'forth'];
+
+  $('.project').each(function() {
+    for (var i = positions.length - 1; i >= 0; i--) {
+      if ($(this).hasClass(`${positions[i]}-position`)) {
+        let newClass = (i - 1 < 0) ? positions[positions.length - 1] : positions[i - 1];
+        $(this).removeClass(`${positions[i]}-position`);
+        $(this).addClass(`${newClass}-position`);
+        break;
+      }
+    }
+
+  })
+}
+
 
 
 /***********************************
@@ -85,6 +124,8 @@ $(window).on('scroll', function() {
   const bScroll = document.scrollingElement.scrollTop;
   changeMenuColor(bScroll);
 });
+
+$('.next-project').on('click', changeCurrentProject);
 
 setTimeout(function() {
   $('.cls-1, .cls-2').animate({
