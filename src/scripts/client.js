@@ -36,6 +36,8 @@ const iterations = ['Web Developer',
   'Hogan McDonald.'
 ];
 
+const windowHeight = $(window).height();
+
 const landing = $('#landing').scrollTop();
 const tech = $('#tech').offset().top;
 const solutions = $('#solutions').offset().top;
@@ -104,12 +106,19 @@ function changeCurrentProject() {
         $(this).removeClass(`${positions[i]}-position`);
         $(this).addClass(`${newClass}-position`);
         break;
-      }
+      } // if block
+    } // for loop
+  }); // each block
+} // change changeCurrentProject
+
+function revealTitles(currentScroll) {
+  $('.section-title').each(function() {
+    if (currentScroll > $(this).offset().top - windowHeight * 0.75) {
+      console.log($(this));
+      $(this).removeClass('section-title');
     }
-
-  })
+  });
 }
-
 
 
 /***********************************
@@ -123,6 +132,7 @@ $('.nav-link').on('click', sectionScroll);
 $(window).on('scroll', function() {
   const bScroll = document.scrollingElement.scrollTop;
   changeMenuColor(bScroll);
+  revealTitles(bScroll);
 });
 
 $('.next-project').on('click', changeCurrentProject);
