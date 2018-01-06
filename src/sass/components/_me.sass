@@ -1,16 +1,31 @@
 #me
-  display: flex
+  // display: flex
   height: 100vh
   width: 100%
-  align-items: center
-  justify-content: center
+  // justify-content: center
+  position: relative
   .wrapper
-    border: 2px solid black
+    border-bottom: 20px solid black
     width: 900px
-    height: 500px
+    height: 650px
     position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
     .title
       position: absolute
       right: 0
       top: 0
       margin: 0
+    .book1
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 90px
+    .book2
+      position: absolute
+      left: 118px
+      bottom: 4px
+      width: 115px
+      transform: rotate(-5deg)
+      border: solid 1px #e6e6e6
