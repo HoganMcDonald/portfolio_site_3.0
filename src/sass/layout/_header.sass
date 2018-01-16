@@ -45,6 +45,8 @@ header
     p
       margin: 0px
       width: 25vh
+  .social-menu-open
+    transform: rotate(90deg)
   .social-menu
     background-color: black
     color: white
@@ -58,8 +60,9 @@ header
     display: flex
     align-items: center
     justify-content: center
+    transition: transform 300ms ease-out
     &:hover
-      background-color: $pinkLavender
+      background-color: #2e2e2e
     p
       margin: 0
       user-select: none

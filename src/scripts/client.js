@@ -58,6 +58,7 @@ function randomInt(min, max) {
 }
 
 function toggleSocial() {
+  $('.social-menu').eq(1).toggleClass('social-menu-open');
   $('.social-link').each(function(index) {
     let timer = (!$(this).hasClass('show')) ? index : 2 - index
     setTimeout(function() {
