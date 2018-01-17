@@ -48,4 +48,35 @@
             text-align: center
             .col
               height: 100%
+              &:nth-child(3)
+                grid-column-start: 1
+                grid-column-end: 3
+      #me
+        .wrapper
+          width: 100vw
+          .title
+            top: 10vh
+            right: 5vw
+          .book1
+            width: 60px
+          .book2
+            width: 75px
+            left: 80px
+          .book3
+            width: 55px
+            left: 163px
     footer
+      .content
+        grid-template-columns: 30vw 50vw
+        .text
+          .taglines
+            margin-top: 35px
+        .contact-form
+          .email
+            input, textarea
+              width: 80%
+              padding: 5px
+            .next
+              // left: -200px
+              top: -135px
+              right: -10px
