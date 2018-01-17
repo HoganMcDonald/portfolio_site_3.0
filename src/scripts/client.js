@@ -115,11 +115,40 @@ function changeCurrentProject() {
 function revealTitles(currentScroll) {
   $('.section-title').each(function() {
     if (currentScroll > $(this).offset().top - windowHeight * 0.75) {
-      console.log($(this));
       $(this).removeClass('section-title');
     }
   });
 }
+
+function sendEmail() {
+  console.log('clicked');
+  let email = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  if (email.test($('#email').val())) {
+    if ($('#message').val().length > 0) {
+      let data = {
+        email: $('#email').val(),
+        message: $('#message').val()
+      }
+
+      $.ajax({
+        type: "POST",
+        url: '/email',
+        data: data,
+        success: function(res) {
+          console.log(res);
+          $('#emailLabel').text('Your Email Address - Sent').css('color', 'yellow');
+          $('#messageLabel').text('Message').css('color', 'black');
+          $('#email').val('');
+          $('#message').val('');
+        }
+      })
+    } else {
+      $('#messageLabel').text('Message - No email body').css('color', 'red');
+    }
+  } else {
+    $('#emailLabel').text('Your Email Address - Not a valid email').css('color', 'red');
+  }
+} // sendEmail()
 
 
 /***********************************
@@ -129,6 +158,8 @@ function revealTitles(currentScroll) {
 $('.social-menu').eq(1).on('click', toggleSocial);
 
 $('.nav-link').on('click', sectionScroll);
+
+$('#send').on('click', sendEmail);
 
 $(window).on('scroll', function() {
   const bScroll = document.scrollingElement.scrollTop;
