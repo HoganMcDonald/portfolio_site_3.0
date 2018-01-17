@@ -1,5 +1,129 @@
 @media (min-width: 768px) and (max-width: 992px)
   #index
+    font-size: 18px
+    overflow-x: hidden
     header
+      nav
+      .contact
+        position: absolute
+      .social-menu
+        width: 80px
+        height: 80px
+        right: 20px
+        bottom: 20px
+        ul
+          right: 90px
+          .social-link
+            width: 50px
+            height: 50px
     main
+      #landing
+        .image
+          width: 100%
+        .site-title
+          left: 5vw
+        .site-title-text
+          left: 5vw
+      #tech
+        .container
+          width: 80vw
+          height: 60vh
+          .title
+            top: 0
+          .box1
+            height: 400px
+          .box2
+            top: 150px
+            left: -40px
+            height: 400px
+            width: 400px
+          .box3
+            height: 400px
+            width: 500px
+            top: 200px
+          .text
+            top: 60%
+            grid-template-columns: auto auto
+            grid-template-rows: max-content
+            text-align: center
+            .col
+              height: 100%
+              &:nth-child(3)
+                grid-column-start: 1
+                grid-column-end: 3
+      #me
+        .wrapper
+          width: 100vw
+          height: 80vh
+          .title
+            top: 0
+            left: 5vw
+      #solutions
+        .wrapper
+          height: 90vh
+          width: 90vw
+          .title
+            left: 0
+            top: 5vh
+          .next-project
+          .project
+            width: 25vw
+            height: 25vw
+            transform: translate(-50%, -50%)
+            h4
+              top: 20%
+            img
+              max-width: 150px
+              max-height: 150px
+            .mockup
+              right: -5px
+              bottom: -5px
+              max-height: 200px
+          .first-position
+            top: 85%
+            left: 15%
+          .second-position
+            top: 85%
+            left: 50%
+          .third-position
+            top: 85%
+            left: 85%
+          .forth-position
+            width: 50vw
+            height: 50vw
+            left: 50%
+            top: 40%
+            .background
+              transform: rotate(-10deg) translate(-50%, -50%)
+              height: 100%
+              width: 100%
+              left: 57%
+            img
+              top: 0
+              right: 0
+              max-width: 220px
+              max-height: 250px
+            .mockup
+              max-height: 300px
+            h4
+              left: 0
+              top: 16%
+            p
+              width: 85%
+              top: 60%
+              text-align: center
     footer
+      .content
+        grid-template-columns: 30vw 50vw
+        .text
+          .taglines
+            margin-top: 35px
+        .contact-form
+          .email
+            input, textarea
+              width: 80%
+              padding: 5px
+              border-radius: 0
+            .next
+              top: -135px
+              right: -10px
