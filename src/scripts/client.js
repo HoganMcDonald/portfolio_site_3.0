@@ -2,6 +2,8 @@
           UI elements
 ***********************************/
 
+let emailSending = true;
+
 const projects = [
   {
     name: 'Odin & Osgar.',
@@ -129,19 +131,23 @@ function sendEmail() {
         email: $('#email').val(),
         message: $('#message').val()
       }
+      if (!emailSending) {
+        emailSending = true;
+        $.ajax({
+          type: "POST",
+          url: '/email',
+          data: data,
+          success: function(res) {
+            console.log(res);
+            $('#emailLabel').text('Your Email Address - Sent').css('color', 'yellow');
+            $('#messageLabel').text('Message').css('color', 'black');
+            $('#email').val('');
+            $('#message').val('');
+            emailSending = false;
+          }
+        })
+      }
 
-      $.ajax({
-        type: "POST",
-        url: '/email',
-        data: data,
-        success: function(res) {
-          console.log(res);
-          $('#emailLabel').text('Your Email Address - Sent').css('color', 'yellow');
-          $('#messageLabel').text('Message').css('color', 'black');
-          $('#email').val('');
-          $('#message').val('');
-        }
-      })
     } else {
       $('#messageLabel').text('Message - No email body').css('color', 'red');
     }
